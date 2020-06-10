@@ -1,0 +1,37 @@
+body{margin:0;background:#fef8ef}
+#area{
+    position:absolute;
+    height:15%;
+    line-height:170%;
+    left:2%;
+    top:1.5%;
+    font-weight:bold;
+    color:#000;
+    font-family:华文楷体;
+}
+a{
+    text-decoration:none;
+    color:#a92919
+}
+#tit{
+    color:#000;
+    position:absolute;
+    height:10%;
+    width:40%;
+    left:30%;
+    top:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+     font-family:"楷体"
+}
+#tit span{font-size:40px}
+#tim{
+    position:absolute;
+    height:10%;
+    right:2%;
+    top:5%;
+    font-weight:bold;
+    color:#000;
+    font-family: 华文行楷;
+}#right{position:absolute;height:80%;width:50%;left:50%;top:10%}#left{position:absolute;height:80%;width:50%;right:50%;top:10%}@media screen and (orientation:portrait){html{width:100vmin;height:100vmax}body{width:100vmin;height:100vmax}#gyroContain{width:100vmax;height:100vmin;transform-origin:top left;transform:rotate(90deg) translate(0,-100vmin)}}@media screen and (orientation:landscape){html{width:100vmax;height:100vmin}body{width:100vmax;height:100vmin}#gyroContain{width:100vmax;height:100vmin}}
