@@ -7,8 +7,7 @@ database:数据库连接层
 
 def get_conn():
     # 建立连接
-    # conn = pymysql.connect(host="127.0.0.1", user="root", password="031516", db="ncov", charset="utf8")
-    conn = pymysql.connect(host="39.99.140.59", user="root", password="031516", db="ncov", charset="utf8")
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="123456", db="cov", charset="utf8")
     # c创建游标
     cursor = conn.cursor()
     return conn, cursor
