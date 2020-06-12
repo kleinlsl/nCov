@@ -1,5 +1,6 @@
 var ecc_world=echarts.init(document.getElementById("left"),"vintage");
 var ecc_world_option={
+    backgroundColor:'',
     title:{left:"center",top:"top"},
     tooltip:{trigger:"item",},
     visualMap:{

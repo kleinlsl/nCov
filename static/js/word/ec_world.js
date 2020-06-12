@@ -4,6 +4,7 @@ var source=[["Country","Confirmed","SQRT","Dead"]];
 var data=[];
 var subtextData="\n数据更新\n\n——by Xcu";
 var ec_world_option={
+    backgroundColor:'',
     dataset:{
         source:[]
     },

@@ -2,7 +2,7 @@ body{
     width:100vw;
     margin:0;
     /*background:url("https://cdn.jsdelivr.net/gh/YX1900/ImageHosting/1900pic/bgg.png") 0 0 / 100% 100% no-repeat;overflow:hidden;*/
-    background:url("../image/bgg.png") 0 0 / 100% 100% no-repeat;overflow:hidden;
+
 	/*display: none;*/
 
 }
@@ -191,12 +191,14 @@ a{
     body{
         width : 100vmin;
         height : 100vmax;
+        background:url("../image/bgg01.jpg") 0 0 / 100% 100% no-repeat;overflow:hidden;
     }
     #gyroContain{
         width : 100vmax;
         height : 100vmin;
         transform-origin: top left;
         transform: rotate(90deg) translate(0,-100vmin);
+        background: rgba(0, 0, 0, 0.4);
     }
   }
 @media screen and (orientation: landscape) {
@@ -207,9 +209,11 @@ a{
     body{
         width : 100vmax;
         height : 100vmin;
+        background:url("../image/bgg01.jpg") 0 0 / 100% 100% no-repeat;overflow:hidden;
     }
     #gyroContain{
         width : 100vmax;
         height : 100vmin;
+        background: rgba(0, 0, 0, 0.4);
     }
 }
