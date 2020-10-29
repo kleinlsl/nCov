@@ -1,4 +1,5 @@
 # -- coding:UTF-8 --
+import os
 import sys
 import time
 import json
@@ -8,7 +9,9 @@ from selenium.webdriver import Chrome, ChromeOptions
 
 import db
 
-
+"""
+用于更新爬取全球疫情数据
+"""
 class Word_data:
     def __init__(self):
         self.cursor = None
@@ -174,12 +177,9 @@ class Word_data:
         finally:
             db.close_conn(self.conn, self.cursor)
 
-
 """
 用于更新爬取腾讯的数据
 """
-
-
 class Tencent_Data:
 
     def __init__(self):
@@ -333,12 +333,9 @@ class Tencent_Data:
         finally:
             db.close_conn(self.conn, self.cursor)
 
-
 """
 用于更新爬取百度的数据
 """
-
-
 class Badidu_Hot:
 
     def __init__(self):
@@ -360,12 +357,14 @@ class Badidu_Hot:
         option.add_argument("--no-sandbox")
         option.add_argument("--disable-gpu")
         option.add_argument("--disable-dev-shm-usage")
-
-        # browser = Chrome(options=option, executable_path=self.Chrome_drive_path)
-        
-        browser = Chrome(options=option)
+        # windows 系统
+        if os.name=="nt":
+            browser = Chrome(options=option, executable_path=self.Chrome_drive_path)
+        else:
+            browser = Chrome(options=option)
         url = self.url
         browser.get(url)
+
         # 找到展开按钮对象
         but = browser.find_element_by_css_selector(
             self.but_selector
@@ -403,7 +402,6 @@ class Badidu_Hot:
             traceback.print_exc()
         finally:
             db.close_conn(self.conn, self.cursor)
-
 
 if __name__ == "__main__":
     l = len(sys.argv)

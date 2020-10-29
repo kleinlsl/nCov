@@ -3,7 +3,7 @@ function gettime() {
 		url: "/time",
 		timeout: 10000, //超时时间设置为10秒；
 		success: function(data) {
-			$("#time").html(data)
+			$("#tim").html(data)
 		},
 		error: function(xhr, type, errorThrown) {
 

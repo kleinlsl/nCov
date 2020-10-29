@@ -1,4 +1,6 @@
 import decimal
+import os
+import re
 import string
 from flask import Flask as _Flask, jsonify
 
@@ -41,39 +43,16 @@ def getLogin():
     pwd = request.values.get("pwd")
     return f'name={name}.pwd={pwd}'
 
-
-@app.route('/getFrom')
-def getFrom():
-    """
-
-    :return: 渲染后的页面
-    """
-    id = request.values.get("id")  # 获取参数
-    return f"""
-        <form action="/login">
-                账号：<input name="name"><br>
-                密码：<input name="pwd"> 
-                <input type="submit">
-            </form>
-        """
-
-
-@app.route('/testRender')
-def testRender():
-    """
-    :return: 渲染后的页面
-    """
-    return render_template("main.html")
-
-
-@app.route('/testAjax', methods=["get", "post"])
-def testAjax():
-    """
-    :return: 渲染后的页面
-    """
-    name = request.values.get("name")
-    return name
-
+@app.route('/music')
+def music():
+    path = os.path.dirname(os.path.abspath(__file__))
+    path = path + '/static/music/'
+    all_files = os.listdir(path)
+    music_list = []
+    for i in all_files:
+        x = re.findall(r'(.*?).mp3', i)
+        music_list.append(x[0])
+    return render_template('music.html', music_list=music_list)
 
 @app.route('/time')
 def get_time():
@@ -185,4 +164,4 @@ def get_rw_data():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port="8003")
+    app.run(host="0.0.0.0",port="8000")

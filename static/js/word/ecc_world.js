@@ -102,7 +102,7 @@ var ecc_world_option={
                 'Guinea Bissau':'几内亚比绍',
                 'Eq. Guinea':'赤道几内亚',
                 'Greece':'希腊',
-                'Greenland':'格陵兰',
+                'Greenland':'格陵兰岛',
                 'Guatemala':'危地马拉',
                 'French Guiana':'法属圭亚那',
                 'Guyana':'圭亚那',

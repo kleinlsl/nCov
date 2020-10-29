@@ -50,10 +50,18 @@ var option_left2 = {
       	//工具框，可以选择
       	toolbox: {
       		feature: {
+
       			saveAsImage: {} //下载工具
       		}
       	},
-
+		dataZoom: [
+			{
+				type: 'slider',
+				show:'true',
+            	start: 80,
+				end:100
+        	},
+        ],
       	xAxis: {
       		// name: '周几',
       		type: 'category',

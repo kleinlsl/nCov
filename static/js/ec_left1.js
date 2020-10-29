@@ -51,10 +51,23 @@ var option_left1 = {
 
       	//工具框，可以选择
       	toolbox: {
+      		// left:'center',
       		feature: {
+      			// dataZoom:{
+      			// 	yAxisIndex:'none'
+				// },
+				// restore:{},
       			saveAsImage: {} //下载工具
       		}
       	},
+		dataZoom: [
+			{
+				type: 'slider',
+				show:'true',
+            	start: 0,
+				end:100
+        	},
+        ],
 
       	xAxis: {
       		// name: '周几',

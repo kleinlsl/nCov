@@ -9,24 +9,33 @@
 		<script src="../static/js/china.js"></script>
 		<script src="../static/js/worldcloud.js"></script>
 		<link href="../static/css/main.css" rel="stylesheet" />
+		<link href="../static/css/music.css" rel="stylesheet" />
 	</head>
 	<body>
+
         <div id="gyroContain">
             <div id="header">
                 <div id="data"><!--其他信息-->
-                    <a href="https://blog.csdn.net/qq_41971768/article/details/106605299">CSDN</a>
+                    <a href="https://kleinlsl.github.io/" target="_blank">博客</a>
                     &nbsp;|&nbsp;
-                    <a href="/word">世界疫情实时追踪</a>
+                    <a href="/word" target="_blank">世界疫情实时追踪</a>
                     <br>
                     数据来源 : 腾讯 & 百度
                 </div>
                 <div id="title">
                     <span>全国疫情实时跟踪</span>
                 </div>
-		        <div id="time"></div>
+		        <div id="time">
+					<audio id="myaudio1" controls loop  autoplay="autoplay"  src="../static/music/陈悦 _ 马克 - 乱红 (笛).mp3"></audio>
+					<br>
+					<div id="tim"></div>
+				</div>
+
             </div>
 
-            <div id="footer"><!--页面低端--></div>
+            <div id="footer"><!--页面低端-->
+
+			</div>
 
             <div id="l1">我是左1</div>
 		<div id="l2">我是左2</div>
@@ -67,7 +76,10 @@
 		<div id="r2">我是右2</div>
 
         </div>
-
+		<script language="JavaScript">
+			var myVid=document.getElementById("myaudio1");
+			myVid.volume=0.5;
+		</script>
 		<script src="../static/js/ec_center.js"></script>
 		<script src="../static/js/ec_left1.js"></script>
 		<script src="../static/js/ec_left2.js"></script>

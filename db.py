@@ -1,4 +1,16 @@
 import pymysql
+from config import cfg_from_file
+from config import cfg
+
+# Whether to import external configuration
+cfg_from_file("resource/config.yaml")
+
+# MySQL Configuration
+host = cfg.database.mysql.host
+user = cfg.database.mysql.user
+password = cfg.database.mysql.passwd
+charset = cfg.database.mysql.charset
+db = cfg.database.mysql.db  # Database name used
 
 """
 database:数据库连接层
@@ -7,7 +19,7 @@ database:数据库连接层
 
 def get_conn():
     # 建立连接
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="123456", db="cov", charset="utf8")
+    conn = pymysql.connect(host=host, user=user, password=password, db=db, charset=charset)
     # c创建游标
     cursor = conn.cursor()
     return conn, cursor

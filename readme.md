@@ -441,7 +441,7 @@
   > cd /home/klein/workspace/nCOV/
   > gunicorn -b 127.0.0.1:5000 -D app:app
   > ```
-	> -w: 表示进程（worker）
+  > -w: 表示进程（worker）
   > -b: 表示绑定ip地址和端口号（bind）
   > -D: 以守护进程的形式启动，后台启动
 

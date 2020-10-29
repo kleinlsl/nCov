@@ -2,7 +2,7 @@ function getTime(){
     $.ajax({
         url:"/time",
         success:function(time_str){
-            $("#tim").html(time_str)
+            $("#time").html(time_str)
         }
     })
 }
