@@ -1,9 +1,12 @@
+import os
+
 import pymysql
 from config import cfg_from_file
 from config import cfg
 
 # Whether to import external configuration
-cfg_from_file("resource/config.yaml")
+if os.path.exists("resource/config.yaml"):
+    cfg_from_file("resource/config.yaml")
 
 # MySQL Configuration
 host = cfg.database.mysql.host
