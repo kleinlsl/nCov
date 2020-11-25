@@ -43,7 +43,7 @@ def query(sql, *args):
     :return:
     """
     conn, cursor = get_conn()
-    cursor.execute(sql, args)
+    cursor.execute(sql, *args)
     res = cursor.fetchall()
     close_conn(conn, cursor)
     return res
