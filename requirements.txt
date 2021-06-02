@@ -14,5 +14,5 @@ PyMySQL==0.9.3
 PyYAML==5.3.1
 requests==2.23.0
 selenium==3.141.0
-urllib3==1.25.9
+urllib3==1.26.5
 Werkzeug==1.0.1
